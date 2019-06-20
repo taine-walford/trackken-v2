@@ -34,10 +34,21 @@ h1 {
   height: 100vh;
   width: 40vw;
   font-size: 35px;
-  border-left: 1px solid grey;
+  border-left: 1px solid #7D7D7D;
 }
 
 .playerContainer {
   margin: 10px 20px;
-  background-color: grey;
+  background-color: #7D7D7D;
+}
+
+.selector {
+  background-color: #5A5A5A;
+  width: 20px;
+  height: 85px;
+  float: left;
+  margin-right: 10px;
+}
+.selector:hover {
+  background-color: #FFFFFF;
 }
