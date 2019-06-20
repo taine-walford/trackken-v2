@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import fire from '../firebase'
+import Sidebar from './Sidebar'
 
 export default class App extends Component {
   constructor() {
@@ -42,10 +43,9 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Trackken bitch</h1>
-        <button onClick={this.getData}>Yikes</button>
-        {this.state.bois.map(x => <p key={x.name}>{x.name} | {x.win}W | {x.loss}L</p>)}
+      <div className="mainContain">
+        <h1 className='center'>T R A C K K E N</h1>
+        <div className="sidebar"><Sidebar bois={this.state.bois} /></div>
       </div>
     )
   }
