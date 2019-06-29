@@ -8,7 +8,7 @@ body {
 
 .mainContain {
   display: flex;
-
+  position: relative;
 }
 .center {
   text-align: center;
@@ -20,9 +20,9 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 45px;
-  line-height: 45px;
-  width: 500px;
-  height: 45px;
+  line-height: 15vh;
+  width: 100%;
+  height: 15vh;
 }
 
 .lightHeader {
@@ -35,20 +35,72 @@ h1 {
   width: 40vw;
   font-size: 35px;
   border-left: 1px solid #7D7D7D;
+  position: absolute;
+  right: 0px;
+}
+
+.leftContain {
+  width: 60vw;
+  height: 100vh;
 }
 
 .playerContainer {
   margin: 10px 20px;
   background-color: #7D7D7D;
+  position: relative;
+  padding-left: 30px;
 }
 
 .selector {
-  background-color: #5A5A5A;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  background-color: #787878;
   width: 20px;
   height: 85px;
   float: left;
   margin-right: 10px;
+  opacity: 1;
 }
+
 .selector:hover {
-  background-color: #FFFFFF;
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 20px;
+  height: 85px;
+  float: left;
+  background-color: white;
+  box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.matchContain {
+  display: flex;
+  height: 70vh;
+  justify-content: space-evenly;
+}
+
+.matchPlayer {
+  background-color: white;
+  width: 40%;
+  height: 60%;
+}
+
+.default {
+  width: 400px;
+  background-color: #787878;
+}
+
+.red {
+  color: red;
+  width: 300px;
+}
+
+.blue {
+  color: blue;
+  width: 500px;
 }
