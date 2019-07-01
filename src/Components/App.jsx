@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import fire from '../firebase'
 import Sidebar from './Sidebar'
+import Player from './Player'
 
 export default class App extends Component {
   constructor() {
@@ -64,8 +65,8 @@ export default class App extends Component {
         <div className="leftContain">
           <h1 className='center'>T R A C K K E N</h1>
           <div className="matchContain">
-            <div className="matchPlayer bluePlayer" player={this.state.blue}>  </div>
-            <div className="matchPlayer redPlayer" player={this.state.red}></div>
+            <Player className="matchPlayer bluePlayer" player={this.state.blue} />
+            <Player className="matchPlayer redPlayer" player={this.state.red} />
           </div>
         </div>
         <div className="sidebar"><Sidebar bois={this.state.bois} handlePlayerSelection={this.handlePlayerSelection} /></div>
