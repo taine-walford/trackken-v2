@@ -19,8 +19,8 @@ handleSelector = event => { // handle selector click
         {this.props.bois.map(boi => {
           return <div key={boi.name} className='playerContainer'>
               <div id={`${boi.name}Selector`} onClick={this.handleSelector} className='selector'></div>
-              <div id={`${boi.name}Overlay`} onClick="return false" className='overlay'></div>
-              <div id={`${boi.name}Card`} className="lightHeader">{boi.name}</div>
+              <div id={`${boi.name}Overlay`} className='overlay'></div>
+              <div id={`${boi.name}Card`}className="lightHeader">{boi.name}</div>
               <span>{boi.win} wins | </span>
               <span>{boi.loss} losses </span>
             </div>
