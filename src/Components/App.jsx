@@ -32,20 +32,18 @@ export default class App extends Component {
   }
 
   handlePlayerSelection = (colour, player) => { // sets state colour to player clicked
-    let flippedColour =  (this.state[colour] === 'blue') ? 'red' : 'blue'
-    let thisState = this.state[colour].name
-    let otherState = this.state[flippedColour].name
-    // If selected twice, clear other state colour
-    if(otherState === player.name) this.setState({[flippedColour] : {}})
-    // If state colour is occupied, default back
-    if (thisState) {
-      let currentButton = document.getElementById(`${thisState}Selector`)
-      currentButton.className = "default"
+    const flipped = (colour === 'blue') ? 'red' : 'blue'
+    const pastName = this.state[colour].name
+    const otherName = this.state[flipped].name
+    // Clear the past colour state, handle both states under smae selector
+    if(pastName && pastName !== otherName) {
+      const pastSelector = document.getElementById(`${pastName}Selector`)
+      pastSelector.className = 'selector default'
     }
     // Set new state colour and set class to state colour
-    let currentButton = document.getElementById(`${player.name}Selector`)
-    currentButton.className = colour
-    this.setState({ [colour]: player })
+    const newSelector = document.getElementById(`${player.name}Selector`)
+    newSelector.className = `selector ${colour}`
+    this.setState({[colour]: player})
   }
 
   getData = () => { // pull data from Firestore
@@ -66,8 +64,8 @@ export default class App extends Component {
         <div className="leftContain">
           <h1 className='center'>T R A C K K E N</h1>
           <div className="matchContain">
-            <div className="matchPlayer blue" player={this.state.blue}>  </div>
-            <div className="matchPlayer red"  player={this.state.red}></div>
+            <div className="matchPlayer bluePlayer" player={this.state.blue}>  </div>
+            <div className="matchPlayer redPlayer" player={this.state.red}></div>
           </div>
         </div>
         <div className="sidebar"><Sidebar bois={this.state.bois} handlePlayerSelection={this.handlePlayerSelection} /></div>

@@ -49,33 +49,23 @@ h1 {
   background-color: #7D7D7D;
   position: relative;
   padding-left: 30px;
+  height: 85px;
 }
 
 .selector {
   position: absolute;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   background-color: #787878;
   width: 20px;
   height: 85px;
   float: left;
   margin-right: 10px;
-  opacity: 1;
+  box-shadow: inset -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .selector:hover {
-  opacity: 0;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  width: 20px;
-  height: 85px;
-  float: left;
-  background-color: white;
-  box-shadow: 2px 0px 3px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: inset -2px 0px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 .matchContain {
@@ -91,16 +81,15 @@ h1 {
 }
 
 .default {
-  width: 400px;
   background-color: #787878;
 }
 
 .red {
-  color: red;
-  width: 300px;
+  background-color: red;
+  box-shadow: 0px 0px 4px 0px red;
 }
 
 .blue {
-  color: blue;
-  width: 500px;
+  background-color: blue;
+  box-shadow: 0px 0px 4px 0px blue;
 }
