@@ -27,9 +27,17 @@ h1 {
 
 h2 {
   font-size: 40px;
-  height: 70px;
-  line-height: 70px;
-  margin: 10px 0px;
+  height: 45px;
+  line-height: 45px;
+  margin: 15px 0px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 30px;
+  height: 40px;
+  margin: 0px;
+  line-height: 40px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -87,7 +95,7 @@ h2 {
 
 .matchPlayer {
   position: relative;
-  background-color: #7D7D7D;
+  background-position: center;
   width: 40%;
   height: 60%;
 
@@ -100,12 +108,12 @@ h2 {
   background-color: #7D7D7D;
 }
 
-.red {
+.redSelector {
   background-color: red;
   filter: drop-shadow(0px 0px 4px red)
 }
 
-.blue {
+.blueSelector {
   background-color: blue;
   filter: drop-shadow(0px 0px 4px blue)
 }
@@ -128,10 +136,19 @@ h2 {
 
 .roundBar {
   position: absolute;
+  background-color: rgba(125, 125, 125, 0.9);
   bottom: 25px;
   width: 100%;
   height: 60px;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+.roundBar.blue{
+  background-color: blue;
+}
+
+.roundBar.red{
+  background-color: red;
 }
 
 .roundButton {
@@ -164,7 +181,7 @@ h2 {
 }
 
 .roundSquare {
- color: white;
+  background-color: rgba(0, 0, 0, 0.3);
   font-family: monospace;
   font-size: 30px;
   font-weight: 600;
@@ -175,13 +192,7 @@ h2 {
 }
 
 .roundSquare:hover {
-  margin: -1px -1px;
-  font-size: 32px;
-  font-weight: 600;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  box-shadow: 0px 0px px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
 }
 
 .leftAlign {

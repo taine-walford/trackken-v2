@@ -36,7 +36,7 @@ export default class App extends Component {
     const otherName = this.state[flipped].name
     if (pastName && pastName !== otherName) document.getElementById(`${pastName}Selector`).className = 'selector default' // Reset
     if (otherName === player.name) this.setState({ [flipped]: {} }) // Clear other colour when player is both
-    document.getElementById(`${player.name}Selector`).className = `selector ${colour}`
+    document.getElementById(`${player.name}Selector`).className = `selector ${colour}Selector`
     this.setState({ 
       [colour]: player,
       blueRounds: 0,
@@ -84,6 +84,7 @@ export default class App extends Component {
               delRound={this.delRound}
               addRound={this.addRound}
               rounds={this.state.blueRounds}
+              char='jin'
             />
             <Player
               className="matchPlayer redPlayer"
@@ -92,6 +93,7 @@ export default class App extends Component {
               delRound={this.delRound}
               addRound={this.addRound}
               rounds={this.state.redRounds}
+              char='kazuya'
             />
           </div>
         </div>
