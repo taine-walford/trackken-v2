@@ -8,7 +8,7 @@ body {
 
 .mainContain {
   display: flex;
-
+  position: relative;
 }
 .center {
   text-align: center;
@@ -20,9 +20,25 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 45px;
-  line-height: 45px;
-  width: 500px;
+  line-height: 15vh;
+  width: 100%;
+  height: 15vh;
+}
+
+h2 {
+  font-size: 40px;
   height: 45px;
+  line-height: 45px;
+  margin: 15px 0px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 30px;
+  height: 40px;
+  margin: 0px;
+  line-height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .lightHeader {
@@ -34,21 +50,157 @@ h1 {
   height: 100vh;
   width: 40vw;
   font-size: 35px;
-  border-left: 1px solid #7D7D7D;
+  position: absolute;
+  right: 0px;
+}
+
+.leftContain {
+  width: 60vw;
+  height: 100vh;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.6);
 }
 
 .playerContainer {
   margin: 10px 20px;
   background-color: #7D7D7D;
+  position: relative;
+  padding-left: 30px;
+  height: 85px;
+  box-shadow: 0px 2px 8px 0px black;
+  border-radius: 15px;
 }
 
 .selector {
-  background-color: #5A5A5A;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  background-color: #7D7D7D;
   width: 20px;
   height: 85px;
   float: left;
   margin-right: 10px;
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: inset -2px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
 .selector:hover {
+  box-shadow: inset -2px 0px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.matchContain {
+  display: flex;
+  height: 70vh;
+  justify-content: space-evenly;
+}
+
+.matchPlayer {
+  position: relative;
+  background-position: center;
+  width: 40%;
+  height: 60%;
+
+  text-align: center;
+  filter: drop-shadow(0px 0px 10px #000);
+  border-radius: 15px;
+}
+
+.default {
+  background-color: #7D7D7D;
+}
+
+.redSelector {
+  background-color: red;
+  filter: drop-shadow(0px 0px 4px red)
+}
+
+.blueSelector {
+  background-color: blue;
+  filter: drop-shadow(0px 0px 4px blue)
+}
+
+.redBar {
+  background-color: red;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.blueBar {
+  background-color: blue;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.roundBar {
+  position: absolute;
+  background-color: rgba(125, 125, 125, 0.9);
+  bottom: 25px;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+.roundBar.blue{
+  background-color: blue;
+}
+
+.roundBar.red{
+  background-color: red;
+}
+
+.roundButton {
+  height: 100%;
+  width: 30px;
+  margin: 15px 0px;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+.roundLit {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
   background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px;
+  filter: drop-shadow(0px 0px 3px white);
+  border-radius: 5px;
+}
+.roundOff {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(41, 41, 41) 0 -1px 9px;
+  border-radius: 5px;
+}
+
+.roundSquare {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: 600;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.roundSquare:hover {
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+.leftAlign {
+  float: left;
+  margin-left: 15px;
+}
+
+.rightAlign {
+  margin-right: 15px;
+  float: right;
 }
